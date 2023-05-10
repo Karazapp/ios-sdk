@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D313E482A0B9E4C00612502 /* TamaraSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 0D313E472A0B9E4C00612502 /* TamaraSDK */; };
 		645368EB2450A7D900ED9A3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645368EA2450A7D900ED9A3B /* AppDelegate.swift */; };
 		645368ED2450A7D900ED9A3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645368EC2450A7D900ED9A3B /* SceneDelegate.swift */; };
 		645368EF2450A7D900ED9A3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645368EE2450A7D900ED9A3B /* ContentView.swift */; };
@@ -75,7 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		546E1814BFB42E16FCD8BDB1 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		0D313E462A0B075F00612502 /* ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-sdk"; path = ..; sourceTree = "<group>"; };
 		645368E72450A7D900ED9A3B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645368EA2450A7D900ED9A3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		645368EC2450A7D900ED9A3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,8 +121,6 @@
 		84FC9B472543F77F0068AF31 /* CheckoutRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRequestBody.swift; sourceTree = "<group>"; };
 		84FC9B482543F77F0068AF31 /* CheckoutSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutSuccess.swift; sourceTree = "<group>"; };
 		84FC9BA4254425850068AF31 /* CheckoutWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutWebView.swift; sourceTree = "<group>"; };
-		CEFB38360522BE0F4A47CF92 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9B2856E19CB080EFB621C40 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D313E482A0B9E4C00612502 /* TamaraSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,14 +149,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D313E452A0B075F00612502 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				0D313E462A0B075F00612502 /* ios-sdk */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		645368DE2450A7D900ED9A3B = {
 			isa = PBXGroup;
 			children = (
+				0D313E452A0B075F00612502 /* Packages */,
 				645368E92450A7D900ED9A3B /* Example */,
 				645369002450A7D900ED9A3B /* ExampleTests */,
 				6453690B2450A7D900ED9A3B /* ExampleUITests */,
 				645368E82450A7D900ED9A3B /* Products */,
-				99DEDB4E6CFD68ED23A05016 /* Pods */,
 				6D9D1B43AE8324F294D5D316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -263,7 +271,6 @@
 				8414A44C26458AD000F17028 /* TamaraSDK.framework */,
 				8453DE5A26440D620013D4FB /* TamaraSDK.framework */,
 				8453DE502643DDE10013D4FB /* TamaraSDK.framework */,
-				CEFB38360522BE0F4A47CF92 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,15 +288,6 @@
 			path = Tamara;
 			sourceTree = "<group>";
 		};
-		99DEDB4E6CFD68ED23A05016 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F9B2856E19CB080EFB621C40 /* Pods-Example.debug.xcconfig */,
-				546E1814BFB42E16FCD8BDB1 /* Pods-Example.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,18 +295,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 645369112450A7D900ED9A3B /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				88C2900BFAB1E3846974166C /* [CP] Check Pods Manifest.lock */,
 				645368E32450A7D900ED9A3B /* Sources */,
 				645368E42450A7D900ED9A3B /* Frameworks */,
 				645368E52450A7D900ED9A3B /* Resources */,
 				84EB1F99254964B600DCCD1F /* Embed Frameworks */,
-				4B427ACA94B5A55C76207F20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				0D313E472A0B9E4C00612502 /* TamaraSDK */,
+			);
 			productName = Example;
 			productReference = 645368E72450A7D900ED9A3B /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -419,48 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4B427ACA94B5A55C76207F20 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88C2900BFAB1E3846974166C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		645368E32450A7D900ED9A3B /* Sources */ = {
@@ -662,13 +619,12 @@
 		};
 		645369122450A7D900ED9A3B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9B2856E19CB080EFB621C40 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
-				DEVELOPMENT_TEAM = UME38WJ3HH;
+				DEVELOPMENT_TEAM = 29ZC2XPHU7;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -676,6 +632,7 @@
 					"$(PROJECT_DIR)/Example/Tamara",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,13 +646,12 @@
 		};
 		645369132450A7D900ED9A3B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 546E1814BFB42E16FCD8BDB1 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
-				DEVELOPMENT_TEAM = UME38WJ3HH;
+				DEVELOPMENT_TEAM = 29ZC2XPHU7;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -703,6 +659,7 @@
 					"$(PROJECT_DIR)/Example/Tamara",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,7 +677,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UME38WJ3HH;
+				DEVELOPMENT_TEAM = 29ZC2XPHU7;
 				INFOPLIST_FILE = ExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -742,7 +699,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UME38WJ3HH;
+				DEVELOPMENT_TEAM = 29ZC2XPHU7;
 				INFOPLIST_FILE = ExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -763,7 +720,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UME38WJ3HH;
+				DEVELOPMENT_TEAM = 29ZC2XPHU7;
 				INFOPLIST_FILE = ExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -783,7 +740,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UME38WJ3HH;
+				DEVELOPMENT_TEAM = 29ZC2XPHU7;
 				INFOPLIST_FILE = ExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -838,6 +795,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D313E472A0B9E4C00612502 /* TamaraSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TamaraSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 645368DF2450A7D900ED9A3B /* Project object */;
 }
